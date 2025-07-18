@@ -1,0 +1,23 @@
+services:
+  opencloud-rolling:
+     container_name: opencloud
+     volumes:
+       - opencloud-data:/var/lib/opencloud
+       - opencloud-config:/etc/opencloud
+     image: opencloudeu/opencloud-rolling:latest
+     restart: always
+     ports:
+       - 9200:9200
+     entrypoint:
+       - /bin/sh
+     command: ["-c", "opencloud init --insecure true || true; opencloud server"]
+     environment:
+       - IDM_CREATE_DEMO_USERS=false
+       - OC_URL=https://Your_Domain.com:9200
+       - IDM_ADMIN_PASSWORD=admin
+       - OC_INSECURE=true
+       - JWT_SECRET=WsAm59YfhLaTER2SXJ
+       - PROXY_ENABLE_BASIC_AUTH=true
+volumes:
+   opencloud-data:
+   opencloud-config:
