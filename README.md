@@ -1,8 +1,10 @@
 # opencloud
-docker-compose.yml example file to quickly get started with a straightforward installation of Opencloud using PaaS Coolify, Dokploy, EasypPanel, Portainer, etc... because the official repo doesn't have good example and it took me a while to figure this out.
+Project Repo: https://github.com/opencloud-eu
 
-After deployment you can access your admin panel at https://Your_Domain.com:9200
-ignore any ssl warnings and i hope you are using lets encrypt to auto-generate you ssl certificates
+docker-compose.yml example file to quickly get started with a straightforward installation of Opencloud using PaaS such as Coolify, Dokploy, EasypPanel, Portainer, etc... because the official repo doesn't have good example and it took me a while to figure this out.
+
+- After deployment you can access your admin panel at https://Your_Domain.com:9200
+- ignore any ssl warnings and i hope you are using lets encrypt to auto-generate your ssl certificates
 
 **Default username is admin**
 
